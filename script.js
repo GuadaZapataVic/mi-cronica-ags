@@ -357,6 +357,7 @@ function checkCollisions() {
 
 // 11. GAME LOOP
 function gameLoop() {
+    // --- Lógica de movimiento (esto está bien) ---
     if (keys.ArrowLeft) {
         posX -= moveSpeed;
         direction = 'left';
@@ -367,10 +368,26 @@ function gameLoop() {
     }
 
     const worldWidth = gameWorld.offsetWidth;
-    if (posX < 0) {
-        posX = 0;
-    }
-    if (posX > worldWidth - marioWidth) {
+
+    // --- LÓGICA DE CAMBIO DE NIVEL (CORREGIDA) ---
+
+    // 1. Ir al nivel ANTERIOR (Izquierda)
+    if (posX < -marioWidth) { // Si Mario desaparece por la izquierda
+        currentLevelIndex--; // Resta un nivel
+        
+        // Si el índice es menor que 0 (estábamos en el Nivel 0)
+        if (currentLevelIndex < 0) {
+            // Ir al último nivel (índice 4 en tu caso)
+            currentLevelIndex = levels.length - 1; 
+            levels.forEach(lvl => lvl.boxes.forEach(b => b.hit = false)); // Resetea cajas
+        }
+        
+        loadLevel(); 
+        // Aparecer en el lado derecho del nuevo nivel
+        posX = worldWidth - marioWidth - 10; 
+    } 
+    // 2. Ir al nivel SIGUIENTE (Derecha)
+    else if (posX > worldWidth - marioWidth) { // Si Mario desaparece por la derecha
         currentLevelIndex++;
         if (currentLevelIndex >= levels.length) {
             currentLevelIndex = 0;
@@ -379,15 +396,8 @@ function gameLoop() {
         loadLevel(); 
         posX = 10; 
     }
-    if (posX < worldWidth + marioWidth) {
-        currentLevelIndex--;
-        if (currentLevelIndex <= levels.length) {
-            currentLevelIndex = 5;
-            levels.forEach(lvl => lvl.boxes.forEach(b => b.hit = false));
-        }
-        loadLevel(); 
-        posX = 1270; 
-    }
+
+    // --- Lógica de Salto (esto está bien) ---
     if (keys.Space && !isJumping) {
         velY = jumpStrength;
         isJumping = true;
@@ -405,6 +415,7 @@ function gameLoop() {
         isJumping = false;
     }
 
+    // --- Resto de la lógica (esto está bien) ---
     checkCollisions();
 
     mario.style.left = `${posX}px`;
@@ -416,9 +427,9 @@ function gameLoop() {
     updateAnimation();
 }
 
-// Iniciar
+// Iniciar (Sin cambios)
 loadLevel(); 
-
 setInterval(gameLoop, 1000 / 60);
+
 
 
