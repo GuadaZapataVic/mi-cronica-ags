@@ -161,32 +161,28 @@ const levels = [
         ]
     },
     {
-        background: "fondo3.png", 
+        background: "fondo5.png", 
         boxes: [
             { 
                 x: 150, 
                 y: 250,
-                title: "Escenario VISA",
-                content: [
+                title: "Stands Gamer",
+                content: [ 
+                    {
+                        type: 'image',
+                        value: '5a.jpg' // CAMBIA ESTO por tu imagen
+                    },
                     {
                         type: 'text',
-                        value: 'En el escenario de Visa se transmitieron competencias de e-sports y actividades que involucraron al público. Valorant, Counter y LOL fueron algunos de los títulos que pasaron por la pantalla grande y sirvieron de campo de batalla entre equipos compuestos por los presentes. También tuvieron lugar en ese escenario las “Findes Gamers Cups” de LOL y Valorant: torneos flash con inscripciones abiertas al público. Los ganadores del torneo fueron premiados con descuentos en juegos y tiendas gamers, y el primer premio consistía en  componentes de computadora.' // CAMBIA ESTO por otra imagen
+                        value: 'En la parte cubierta del predio estaba lo más importante para la comunidad gamer: los stands de videojuegos. Eran 23 los puestos dedicados a vender componentes para computadoras, promocionar juegos, equipos de audio, sillas gamer, y todo lo relacionado con la comunidad. Marcas como Compra Gamer, JBL, Logitech, Intel, AMD y Nintendo proponían actividades a cambio de premios o tickets que se podían canjear por merch de las marcas. Las filas para participar de las actividades eran larguísimas, y el calor del lugar mezclado con una multitud que se multiplicaba, transformó al evento en una prueba de resistencia física.' // CAMBIA ESTO por otra imagen
                     },
                     {
                         type: 'image',
-                        value: '3a.jpg' // CAMBIA ESTO por tu imagen
+                        value: '5b.jpg' // CAMBIA ESTO por tu imagen
                     },
                     {
                         type: 'text',
-                        value: `Además de las competencias de videojuegos, al escenario Visa también subieron cosplayers que compitieron por el disfraz más creativo, fiel y complejo. El evento duró tres días, y se presentaron más de 30 artistas que compitieron por una variedad de premios relacionados con el mundo del gaming. La magia de los cosplayers no sólo radicó en la complejidad de sus trajes, sino en el personaje que encarnaron durante el evento.`
-                    },
-                    {
-                        type: 'image',
-                        value: '3b.jpg' // CAMBIA ESTO por tu imagen
-                    },
-                    {
-                        type: 'text',
-                        value: 'Al costado del escenario, M0chi, una chica de baja estatura que parecía un camaleón, posaba para los que le pedían una foto. “Estoy haciendo cosplay de Neeko, es un personaje del LOL”, dijo en medio de un tumulto de gente. Apenas terminó la oración, un chico con una cámara profesional se le puso enfrente y le gritó “¡foto!”. Ella se enroscó en una pose complicada, esperó al flash, y siguió hablando como si nada hubiera pasado: “Esto es goma eva, cancán y cartón. Todo lo comprás en una librería, el tema es el tiempo. Este traje me llevó alrededor de 12 horas en hacer”, explicó mientras mostraba cómo, en realidad, no se había pintado de verde, sino que tenía una “símil piel” hecha de cancán verde que le cubría todo el cuerpo. De la espalda baja de M0chi, que no quiso compartir su nombre real, salía una cola larga adornada con flores hechas de Goma Eva colorida. Parecía descalza, pero en realidad, se había pegado una plantilla a modo de zapato. A su lado había una chica llamada Larissa. Era muy voluptuosa y llevaba un vestido negro con un escote pronunciado. De los costados de su cabeza brotaban unos cuernos blancos que descansaban sobre una especie de velo de monja. Un chico robusto de chomba rosa se le acercó, le tocó el hombro, le dio una dona y la miró fijamente, expectante. La chica agradeció al desconocido con una risa. Cuando el chico se fue, desilusionado, la sonrisa de la cosplayer desapareció, y abandonó la dona en una mesa. Larissa hacía cosplay de RN Aquila de Azur Lane, y mirando seria al horizonte, explicó, “siempre me pasan estas cosas, te acostumbras”. “Vienen a pedirnos una foto y nos agarran de la cintura, nos tiran onda, nos hacen preguntas muy personales. A mi eso me cae mal, me molesta, pero hay mucha gente que se emociona por vernos, y eso es lo más lindo”, dijo sonriendo levemente. A diferencia de M0chi, que no cobraba por su tiempo, Larissa no hacía fotografías gratis, y explicó que para ella, esto es una forma de promoción: tiene un Only Fans que funciona como su única fuente de ingresos. “No sé exactamente cuánto estoy ganando, pero la suscripción es de 10 dólares por mes”, comentó, y confesó que este tipo de eventos aumentan sustancialmente su base de seguidores. M0chi, en cambio, dijo tímidamente que “vengo acá porque amo el cosplay y la comunidad. Hay algunos eventos a los que te pagan por ir o en los que podes competir por premios, pero es más difícil llegar hasta allá”. El diálogo fue abruptamente interrumpido por otro joven con una cámara grande y pesada que les pedía una foto para la AGS. Las cosplayers posaron inmediatamente, primero juntas y después separadas. Hicieron alrededor de tres fotos cada una, y, pronto, una multitud de hombres en sus veintes hicieron fila para compartir aunque sea un minuto con ellas.' // CAMBIA ESTO por tu imagen
+                        value: `Muchas marcas se lucieron con sus stands. Por ejemplo, Mojang Studios, los creadores del videojuego Minecraft, plantearon una experiencia inmersiva y crearon un pequeño escenario ambientado en el mundo de Minecraft. Había un árbol, tierra y mesas de madera cuadradas sobre las que se apoyaban computadoras gamer con el juego del que trataba el stand. Ese era el otro atractivo del evento: había una gran variedad de equipos disponibles para probar. En el stand de Nintendo, que ocupaba gran parte del espacio dispuesto por la AGS, había ocho Nintendo Switch 2 para que el público del evento probara. Compra Gamer puso a disposición monitores curvos, y Shell computadores con volante y cambios. Sin embargo, para Jawer, un chico de 22 años de pelo largo y enrulado que visita la AGS desde su edición número ocho, esto no es suficiente: “antes habían más stands, juegos, premios. Para qué quiero probar computadoras si ya tengo una en mi casa”. Su crítica es válida: ¿Por qué la atracción principal de un evento de gaming destinado a gamers ofrece lo mismo de lo que ya disponen? Para Ariel, parte del grupo de amigos que acompañaba a Jawer, la respuesta es clara: “Es que nosotros ya no somos el público principal de la AGS. Están tratando de sumar más gente que le guste el trap”. Siguiendo con lo que planteaba Ariel, su amigo Matias agregó que “a nosotros no nos gusta la música que pasan ni lo que venden en los stands. Ya no es original, se nota que se volvió comercial y se llenó de gente que no juega”. A los chicos les interesaban las competencias de Valorant y LOL, pero había tanta gente que no pudieron conseguir un asiento para ver los torneos y tampoco pudieron jugar a nada. Este tipo de testimonios se repitieron en grupos de amigos gamers. El relato de las familias, era otro: “Nunca vinimos a nada parecido a esto, nos parece que está bueno para usar cosas que normalmente uno no tiene”. La AGS se plantea entonces como una novedad para unos y un fracaso para otros. A pesar de todo, este año marcaron un récord de concurrencia.`
                     }
                 ],
                 hit: false 
@@ -416,3 +412,4 @@ function gameLoop() {
 loadLevel(); 
 
 setInterval(gameLoop, 1000 / 60);
+
