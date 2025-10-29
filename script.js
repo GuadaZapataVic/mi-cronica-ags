@@ -379,7 +379,15 @@ function gameLoop() {
         loadLevel(); 
         posX = 10; 
     }
-
+    if (posX < worldWidth + marioWidth) {
+        currentLevelIndex--;
+        if (currentLevelIndex <= levels.length) {
+            currentLevelIndex = 5;
+            levels.forEach(lvl => lvl.boxes.forEach(b => b.hit = false));
+        }
+        loadLevel(); 
+        posX = 1270; 
+    }
     if (keys.Space && !isJumping) {
         velY = jumpStrength;
         isJumping = true;
@@ -412,4 +420,5 @@ function gameLoop() {
 loadLevel(); 
 
 setInterval(gameLoop, 1000 / 60);
+
 
