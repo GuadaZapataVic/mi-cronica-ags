@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Fondo neutro y limpio */
+            background-color: #f4f4f7;
+            color: #333;
+            /* Centramos el contenido vertical y horizontalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 700px;
+            margin: 30px;
+            padding: 40px;
+            /* Damos un fondo blanco a la tarjeta */
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            
+            /* Animación sutil de entrada */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- TEXTOS --- */
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+
+        .bajada {
+            font-size: 1.15em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        /* --- INSTRUCCIONES --- */
+        .instructions {
+            text-align: left;
+            padding: 25px;
+            background-color: #f9f9f9; /* Un fondo levemente gris */
+            border-radius: 8px;
+            border: 1px solid #eee;
+            margin-top: 30px;
+        }
+
+        .instructions h2 {
+            font-size: 1.6em;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .instructions ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .instructions li {
+            font-size: 1.1em;
+            color: #444;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Estilo para las "teclas" */
+        .key {
+            font-weight: 700;
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 5px;
+            border-bottom: 2px solid #ccc;
+            margin-right: 10px;
+            min-width: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* --- BOTÓN DE ENTRADA --- */
+        .btn-entrar {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-top: 30px;
+            
+            background-color: #333;
+            color: #fff;
+            
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-entrar:hover {
+            transform: scale(1.05);
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Argentina Game Show edición 2025: un evento de videojuegos, cosplay y trap</h1>
+        
+        <p class="bajada">
+            El 10, 11 y 12 de octubre tuvo lugar la 11va edición del Argentina Game Show (AGS) en Tecnópolis. Este año asistieron más de 100.000 personas al evento, y disfrutaron de sorteos, juegos, música en vivo, e-sports y mucho más bajo el caluroso sol de octubre.
+        </p>
+        
+        <a href="mario.html" class="btn-entrar">Comenzar Experiencia</a>
+
+        <div class="instructions">
+            <h2>Cómo Jugar</h2>
+            <ul>
+                <li><span class="key">←</span><span class="key">→</span> Usa las flechas para moverte.</li>
+                <li><span class="key">Espacio</span> Presiona la barra espaciadora para saltar.</li>
+                <li><span class="key">?</span> Salta y golpea las cajas para leer el contenido.</li>
+                <li><span class="key">→</span> Llega al final del escenario para avanzar.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    overflow: hidden; 
+    image-rendering: pixelated; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+#game-world {
+    position: relative;
+    width: 100vw;  
+    height: 100vh; 
+    border: none; 
+    overflow: hidden; 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 85px; 
+    background-color: transparent;
+    z-index: 1;
+}
+
+#mario {
+    position: absolute;
+    bottom: 85px; 
+    left: 50px;
+    transform: scale(2);
+    transform-origin: bottom center; 
+    z-index: 3; 
+}
+
+.q-box {
+    position: absolute;
+    background-image: url('bloque.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 2; 
+}
+
+.q-box.hit {
+    filter: brightness(0.6);
+}
+
+#message-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 60vw;
+    height: 70vh;
+    box-sizing: border-box;
+    background-color: rgba(40, 40, 40, 0.98); 
+    border: 2px solid #fff;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px 30px; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+}
+
+#message-box.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 12;
+}
+
+#message-content-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 30px;
+    /* Estilos de scroll para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #999 #444;
+}
+
+/* --- ESTILOS DINÁMICOS (REEMPLAZAN A LOS IDs ANTERIORES) --- */
+
+/* Estilo para el Título */
+#message-content-wrapper h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo para los Párrafos de texto */
+#message-content-wrapper p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-weight: 400;
+    white-space: pre-wrap; /* Respeta los saltos de línea */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo para las Imágenes intercaladas */
+#message-content-wrapper img {
+    display: block;
+    max-width: 70%;
+    margin: 20px auto; /* Espacio arriba y abajo */
+    border-radius: 5px;
+}
+
+
+/* --- Estilos de la barra de scroll para Chrome, Edge, Safari --- */
+#message-content-wrapper::-webkit-scrollbar {
+    width: 10px; 
+}
+#message-content-wrapper::-webkit-scrollbar-track {
+    background: #444; 
+    border-radius: 10px;
+}
+#message-content-wrapper::-webkit-scrollbar-thumb {
+    background-color: #999; 
+    border-radius: 10px;
+    border: 2px solid #444; 
+}
+#message-content-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #BBB;
+}
