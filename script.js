@@ -159,6 +159,39 @@ const levels = [
                 hit: false 
             }
         ]
+    },
+    {
+        background: "fondo3.png", 
+        boxes: [
+            { 
+                x: 150, 
+                y: 250,
+                title: "Escenario VISA",
+                content: [
+                    {
+                        type: 'text',
+                        value: 'En el escenario de Visa se transmitieron competencias de e-sports y actividades que involucraron al público. Valorant, Counter y LOL fueron algunos de los títulos que pasaron por la pantalla grande y sirvieron de campo de batalla entre equipos compuestos por los presentes. También tuvieron lugar en ese escenario las “Findes Gamers Cups” de LOL y Valorant: torneos flash con inscripciones abiertas al público. Los ganadores del torneo fueron premiados con descuentos en juegos y tiendas gamers, y el primer premio consistía en  componentes de computadora.' // CAMBIA ESTO por otra imagen
+                    },
+                    {
+                        type: 'image',
+                        value: '3a.jpg' // CAMBIA ESTO por tu imagen
+                    },
+                    {
+                        type: 'text',
+                        value: `Además de las competencias de videojuegos, al escenario Visa también subieron cosplayers que compitieron por el disfraz más creativo, fiel y complejo. El evento duró tres días, y se presentaron más de 30 artistas que compitieron por una variedad de premios relacionados con el mundo del gaming. La magia de los cosplayers no sólo radicó en la complejidad de sus trajes, sino en el personaje que encarnaron durante el evento.`
+                    },
+                    {
+                        type: 'image',
+                        value: '3b.jpg' // CAMBIA ESTO por tu imagen
+                    },
+                    {
+                        type: 'text',
+                        value: 'Al costado del escenario, M0chi, una chica de baja estatura que parecía un camaleón, posaba para los que le pedían una foto. “Estoy haciendo cosplay de Neeko, es un personaje del LOL”, dijo en medio de un tumulto de gente. Apenas terminó la oración, un chico con una cámara profesional se le puso enfrente y le gritó “¡foto!”. Ella se enroscó en una pose complicada, esperó al flash, y siguió hablando como si nada hubiera pasado: “Esto es goma eva, cancán y cartón. Todo lo comprás en una librería, el tema es el tiempo. Este traje me llevó alrededor de 12 horas en hacer”, explicó mientras mostraba cómo, en realidad, no se había pintado de verde, sino que tenía una “símil piel” hecha de cancán verde que le cubría todo el cuerpo. De la espalda baja de M0chi, que no quiso compartir su nombre real, salía una cola larga adornada con flores hechas de Goma Eva colorida. Parecía descalza, pero en realidad, se había pegado una plantilla a modo de zapato. A su lado había una chica llamada Larissa. Era muy voluptuosa y llevaba un vestido negro con un escote pronunciado. De los costados de su cabeza brotaban unos cuernos blancos que descansaban sobre una especie de velo de monja. Un chico robusto de chomba rosa se le acercó, le tocó el hombro, le dio una dona y la miró fijamente, expectante. La chica agradeció al desconocido con una risa. Cuando el chico se fue, desilusionado, la sonrisa de la cosplayer desapareció, y abandonó la dona en una mesa. Larissa hacía cosplay de RN Aquila de Azur Lane, y mirando seria al horizonte, explicó, “siempre me pasan estas cosas, te acostumbras”. “Vienen a pedirnos una foto y nos agarran de la cintura, nos tiran onda, nos hacen preguntas muy personales. A mi eso me cae mal, me molesta, pero hay mucha gente que se emociona por vernos, y eso es lo más lindo”, dijo sonriendo levemente. A diferencia de M0chi, que no cobraba por su tiempo, Larissa no hacía fotografías gratis, y explicó que para ella, esto es una forma de promoción: tiene un Only Fans que funciona como su única fuente de ingresos. “No sé exactamente cuánto estoy ganando, pero la suscripción es de 10 dólares por mes”, comentó, y confesó que este tipo de eventos aumentan sustancialmente su base de seguidores. M0chi, en cambio, dijo tímidamente que “vengo acá porque amo el cosplay y la comunidad. Hay algunos eventos a los que te pagan por ir o en los que podes competir por premios, pero es más difícil llegar hasta allá”. El diálogo fue abruptamente interrumpido por otro joven con una cámara grande y pesada que les pedía una foto para la AGS. Las cosplayers posaron inmediatamente, primero juntas y después separadas. Hicieron alrededor de tres fotos cada una, y, pronto, una multitud de hombres en sus veintes hicieron fila para compartir aunque sea un minuto con ellas.' // CAMBIA ESTO por tu imagen
+                    }
+                ],
+                hit: false 
+            }
+        ]
     }
 ];
 let currentLevelIndex = 0;
@@ -381,4 +414,5 @@ function gameLoop() {
 
 // Iniciar
 loadLevel(); 
+
 setInterval(gameLoop, 1000 / 60);
