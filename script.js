@@ -36,7 +36,7 @@ const FRAME_JUMP = "jump.png";
 // --- SONIDOS ---
 const jumpSound = new Audio('salto.mp3');
 
-// --- ESTRUCTURA DE NIVELES (SIN CAMBIOS) ---
+// --- ESTRUCTURA DE NIVELES (CON EPÍGRAFES) ---
 const levels = [
     {
         background: "fondo1.png", 
@@ -48,7 +48,8 @@ const levels = [
                 content: [
                     {
                         type: 'image',
-                        value: '1b.jpg'
+                        value: '1b.jpg',
+                        caption: 'El arte urbano fue protagonista en los pasillos de la AGS.' // EPÍGRAFE
                     },
                     { 
                         type: 'text', 
@@ -56,7 +57,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '1c.jpg'
+                        value: '1c.jpg',
+                        caption: 'Un artista da vida a un mural mientras un cosplayer de Goku observa.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -64,7 +66,7 @@ const levels = [
                     },
                     {
                         type: 'text',
-                        value: `Pasó el tiempo y más gente se juntó a pintar y a ver las obras de otros. De a poco, los mismos que se presentaron a la edición 2025 de la AGS se volvieron parte del evento, y crearon una nueva atracción: la “pintada” del Argentina Game Show.`
+                        value: `Pasó el tiempo y más gente se juntó a pintar y a ver las obras de otros. De a poco, los mismos que se presentaron a la edición 2025 de la AGS se volvieron parte del evento, y crearon una nueva attraction: la “pintada” del Argentina Game Show.`
                     }
                 ],
                 hit: false 
@@ -81,7 +83,8 @@ const levels = [
                 content: [
                     {
                         type: 'image',
-                        value: '2a.jpg'
+                        value: '2a.jpg',
+                        caption: 'El escenario principal de Speed Unlimited fue el centro de los shows de trap.' // EPÍGRAFE
                     },
                     { 
                         type: 'text', 
@@ -93,7 +96,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '2b.jpg'
+                        value: '2b.jpg',
+                        caption: 'El público joven, principal audiencia de los artistas urbanos.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -118,7 +122,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3a.jpg'
+                        value: '3a.jpg',
+                        caption: 'Los torneos de e-sports se transmitieron en pantallas gigantes.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -126,7 +131,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3b.jpg'
+                        value: '3b.jpg',
+                        caption: 'M0chi (Neeko) y Larissa (RN Aquila) posan para las cámaras.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -147,7 +153,8 @@ const levels = [
                 content: [
                     {
                         type: 'image',
-                        value: '4a.jpg'
+                        value: '4a.jpg',
+                        caption: 'El "Cosplay Alley", un pasillo dedicado a artistas y stands.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -155,7 +162,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '4b.jpg'
+                        value: '4b.jpg',
+                        caption: 'El ilustrador Leo Batic en su puesto, dibujando por pasión.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -163,7 +171,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '4c.jpg'
+                        value: '4c.jpg',
+                        caption: 'Caro (Evelynn) cuenta los desafíos del cosplay en el evento.' // EPÍGRAFE
                     }
                 ],
                 hit: false 
@@ -180,7 +189,8 @@ const levels = [
                 content: [ 
                     {
                         type: 'image',
-                        value: '5a.jpg'
+                        value: '5a.jpg',
+                        caption: 'El stand de Nintendo, uno de los más concurridos.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -188,7 +198,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '5b.jpg'
+                        value: '5b.jpg',
+                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -202,10 +213,9 @@ const levels = [
 ];
 let currentLevelIndex = 0;
 
-// 4. ESTADO DEL JUEGO (MODIFICADO)
+// 4. ESTADO DEL JUEGO
 let posX = 50;
-// let posY = groundHeight; // <-- Se asignará al iniciar
-let posY;                   // <-- NUEVO
+let posY; // Se asignará al iniciar
 
 let velY = 0;
 let isJumping = false;
@@ -230,11 +240,12 @@ document.addEventListener('keyup', (e) => {
     }
 });
 
-// --- NUEVO EVENT LISTENER: Ajusta el suelo si la ventana cambia de tamaño ---
+// Ajusta el suelo si la ventana cambia de tamaño
 window.addEventListener('resize', () => {
     updateGroundHeight();
-    // Si Mario está en el suelo, lo "pega" al nuevo suelo
-    if (!isJmuping) {
+    // --- ¡CORRECCIÓN! ---
+    // El error estaba aquí: decía 'isJmuping'
+    if (!isJumping) { 
         posY = groundHeight;
     }
 });
@@ -257,7 +268,7 @@ function updateAnimation() {
     }
 }
 
-// 7. MOSTRAR Y OCULTAR MENSAJE
+// 7. MOSTRAR Y OCULTAR MENSAJE (MODIFICADO PARA EPÍGRAFES)
 function showMessage(boxData) {
     // 1. Limpiar el contenido anterior
     messageContentWrapper.innerHTML = '';
@@ -277,8 +288,16 @@ function showMessage(boxData) {
         else if (item.type === 'image') {
             const imgEl = document.createElement('img');
             imgEl.src = item.value;
-            imgEl.alt = boxData.title; // Alt text descriptivo
+            imgEl.alt = boxData.title;
             messageContentWrapper.appendChild(imgEl);
+
+            // --- NUEVO: Añadir epígrafe ---
+            if (item.caption && item.caption.trim() !== "") {
+                const captionEl = document.createElement('p');
+                captionEl.className = 'caption'; // Se aplica el estilo .caption de style.css
+                captionEl.textContent = item.caption;
+                messageContentWrapper.appendChild(captionEl);
+            }
         }
     });
     
@@ -377,7 +396,7 @@ function checkCollisions() {
     });
 }
 
-// 11. GAME LOOP (Corregido)
+// 11. GAME LOOP (LÍMITES DE NIVEL MODIFICADOS)
 function gameLoop() {
     // --- Lógica de movimiento ---
     if (keys.ArrowLeft) {
@@ -391,26 +410,27 @@ function gameLoop() {
 
     const worldWidth = gameWorld.offsetWidth;
 
-    // --- LÓGICA DE CAMBIO DE NIVEL (CORREGIDA) ---
+    // --- LÓGICA DE CAMBIO DE NIVEL (SIN LOOP) ---
+    
     // 1. Ir al nivel ANTERIOR (Izquierda)
     if (posX < -marioWidth) { 
-        currentLevelIndex--; 
-        if (currentLevelIndex < 0) {
-            currentLevelIndex = levels.length - 1; 
-            levels.forEach(lvl => lvl.boxes.forEach(b => b.hit = false));
+        if (currentLevelIndex > 0) { // Si NO es el primer nivel (0)
+            currentLevelIndex--; 
+            loadLevel(); 
+            posX = worldWidth - marioWidth - 10; // Aparece a la derecha
+        } else {
+            posX =  10 ; // Se traba en el borde izquierdo
         }
-        loadLevel(); 
-        posX = worldWidth - marioWidth - 10; 
     } 
     // 2. Ir al nivel SIGUIENTE (Derecha)
     else if (posX > worldWidth - marioWidth) { 
-        currentLevelIndex++;
-        if (currentLevelIndex >= levels.length) {
-            currentLevelIndex = 0;
-            levels.forEach(lvl => lvl.boxes.forEach(b => b.hit = false));
+        if (currentLevelIndex < levels.length - 1) { // Si NO es el último nivel
+            currentLevelIndex++;
+            loadLevel(); 
+            posX = 10; // Aparece a la izquierda
+        } else {
+            posX = worldWidth - marioWidth; // Se traba en el borde derecho
         }
-        loadLevel(); 
-        posX = 10; 
     }
 
     // --- Lógica de Salto ---
@@ -426,7 +446,6 @@ function gameLoop() {
     posY += velY;
 
     // --- Colisión con el suelo ---
-    // (Usa la variable 'groundHeight' calculada)
     if (posY <= groundHeight) { 
         posY = groundHeight;
         velY = 0;
@@ -447,7 +466,7 @@ function gameLoop() {
 
 
 // Iniciar (MODIFICADO)
-updateGroundHeight(); // <-- NUEVO: Calcula el suelo por primera vez
-posY = groundHeight;  // <-- NUEVO: Asigna la posición inicial de Mario
+updateGroundHeight(); // Calcula el suelo por primera vez
+posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
