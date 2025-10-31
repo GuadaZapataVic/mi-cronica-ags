@@ -133,8 +133,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3a.jpg',
-                        caption: 'El sábado hubo un concurso de cosplays de Halloween' // EPÍGRAFE
+                        value: '3c.jpg',
+                        caption: 'El viernes se enfrentaron los equipos KRÜ BLAZE y AKAVE en valorant' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -151,8 +151,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3c.jpg',
-                        caption: 'El viernes se enfrentaron los equipos KRÜ BLAZE y AKAVE en valorant' // EPÍGRAFE
+                        value: '3a.jpg',
+                        caption: 'El sábado hubo un concurso de cosplays de Halloween' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -543,6 +543,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
