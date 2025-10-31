@@ -390,7 +390,7 @@ function renderBoxes() {
         const boxEl = document.createElement('div');
         boxEl.className = 'q-box';
         boxEl.style.left = `${boxData.x}vw`;
-        boxEl.style.bottom = `${boxData.y}bh`;
+        boxEl.style.bottom = `${boxData.y}vh`;
         boxEl.style.width = `${BOX_SIZE}px`;
         boxEl.style.height = `${BOX_SIZE}px`;
         boxEl.dataset.index = index; 
@@ -539,6 +539,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
