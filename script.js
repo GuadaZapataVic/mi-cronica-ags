@@ -42,7 +42,7 @@ const levels = [
         background: "fondo1.png", 
         boxes: [ 
             { 
-                x: 325, 
+                x: 250, 
                 y: 250, 
                 title: "La pintada de la AGS",
                 content: [
@@ -527,6 +527,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
