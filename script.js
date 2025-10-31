@@ -89,11 +89,6 @@ const levels = [
                 y: 250,
                 title: "Escenario de Speed Unlimited",
                 content: [
-                    {
-                        type: 'image',
-                        value: '2a.jpg',
-                        caption: 'El escenario principal de Speed Unlimited fue el centro de los shows de trap.' // EPÍGRAFE
-                    },
                     { 
                         type: 'text', 
                         value: `El evento contó con dos escenarios: uno al aire libre, sponsoreado por Speed Unlimited, y otro cubierto, sponsoreado por Visa. El primero era el principal, y allí se presentaron alrededor de 30 artistas que tocaron música en vivo, en su mayoría de trap. Lit Killah, Lucho SSJ, Seven Kayne y Bhavi fueron algunas de las figuras de alto perfil presentes a lo largo de los tres días.`
@@ -110,6 +105,10 @@ const levels = [
                     {
                         type: 'text',
                         value: `Por el escenario de Speed no solo pasaron traperos, sino que también hubo streamers. El primer día de la AGS, parte del panel de Paren la Mano, un programa de streaming de Vorterix, ocupó el escenario principal del festival para presentar el Cara a Cara de “Párense de Manos III”. El último se trata de un show de boxeo entre streamers, que tendrá lugar a fin de año, y que aprovechó a la AGS como antesala promocional. El sábado 11 subieron al escenario Coscu, Joaco Lopez y Espe, creadores de contenido, que hicieron de jurado para el BRG Talent Show: un concurso de talentos que se transmite por la plataforma Kick, otro de los sponsors del Argentina Game Show, y en el que participaron jóvenes por una computadora gamer.`
+                    },
+                    {
+                        type: 'text',
+                        value: `El sábado 11 subieron al escenario Coscu, Joaco Lopez y Espe, creadores de contenido, que hicieron de jurado para el BRG Talent Show: un concurso de talentos que se transmite por la plataforma Kick, otro de los sponsors del Argentina Game Show, y en el que participaron jóvenes por una computadora gamer.`
                     }
                 ],
                 hit: false 
@@ -129,11 +128,6 @@ const levels = [
                         value: 'En el escenario de Visa hubo competencias de e-sports en vivo y otras actividades que involucraron al público. <i>Valorant</i>, <i>Counter Strike</i> y <i>League of Legends</i> (LOL) fueron algunos de los títulos que pasaron por la pantalla grande del escenario, y sirvieron de campo de batalla entre equipos compuestos por los presentes. También se celebraron las “Findes Gamers Cups” de LOL y <i>Valorant</i>: torneos <i>flash</i> con inscripciones abiertas al público. Los ganadores de las competencias fueron premiados con descuentos en juegos, tiendas gamer y componentes de computadora.'
                     },
                     {
-                        type: 'image',
-                        value: '3a.jpg',
-                        caption: 'Los torneos de e-sports se transmitieron en pantallas gigantes.' // EPÍGRAFE
-                    },
-                    {
                         type: 'text',
                         value: `Además de las competencias de videojuegos, al escenario Visa también subieron cosplayers que compitieron por la puesta en escena más creativa, fiel y compleja. El evento duró los tres días de la AGS, y se presentaron más de 30 artistas que se enfrentaron por una variedad de premios relacionados con el mundo del <i>gaming</i>. La magia de los cosplayers no radicó solo en la complejidad de sus trajes, sino en la manera en la que encarnaron a sus personajes durante todo el evento.`
                     },
@@ -149,6 +143,11 @@ const levels = [
                     {
                         type: 'text',
                         value: 'La cosplayer-camaleón parecía descalza, pero en realidad, se había pegado una plantilla a modo de zapato. A su lado, una chica intentaba no pisarla con sus altos tacos negros. Se llamaba Larissa, y era muy alta y voluptuosa. Llevaba un vestido negro con un escote pronunciado y tenía piercings encima del labio y en las mejillas. Estaba haciendo cosplay de RN Aquila, de <i>Azur Lane</i>. A pesar de que no dejaba de sonreír, tenía un aire satánico, como si fuera una bruja: quizás era por los cuernos que le brotaban de los costados de su cabeza y que atravesaban una especie de velo de monja, o por sus piernas tatuadas con estrellas y calaveras. Pero eso no le impedía ser dulce con quienes se le acercaban a pedirle una foto.'
+                    },
+                    {
+                        type: 'image',
+                        value: '3a.jpg',
+                        caption: 'Los torneos de e-sports se transmitieron en pantallas gigantes.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -172,11 +171,6 @@ const levels = [
                 title: "El cosplay alley",
                 content: [
                     {
-                        type: 'image',
-                        value: '4a.jpg',
-                        caption: 'El "Cosplay Alley", un pasillo dedicado a artistas y stands.' // EPÍGRAFE
-                    },
-                    {
                         type: 'text',
                         value: 'En la parte cubierta del predio había un pasillo entero dedicado a stands de cosplayers llamado “cosplay alley”. Allí podían encontrarse más de 50 puestos que ofrecían todo tipo de productos relacionados con el animé y los videojuegos. Cada mesa vendía algo distinto: algunas ofrecían figuras en 3D, llaveros y cartas; otras tenían artistas que hacían ilustraciones en vivo; e incluso había mesas en las que descansaban libros de fotos explícitas de los cosplayers del stand.'
                     },
@@ -190,13 +184,13 @@ const levels = [
                         value: 'Una chica con un traje negro tipo catsuit promocionaba su perfil de Only Fans en su stand. “A mi no me pagan por venir”, dijo, “los de la AGS te contactan por Instagram y te ofrecen ponerte un stand. Te pagan la entrada y la bebida, pero el resto me lo tuve que bancar yo”, comentó mientras miraba a los hombres que pasaban las páginas de sus álbumes, chequeando que no les sacaran fotos. En su mesa, Hika, que hacía cosplay de Bayonetta, la protagonista de la serie de videojuegos del mismo nombre, tenía dos gruesos álbumes abiertos por la mitad, en los que había de dos a cuatro imágenes por página. Cada una era distinta, y cambiaba el cosplay o la pose: a veces, miraba sugerentemente a la cámara con un traje de colegiala japonesa, otras, se agachaba de espaldas con un body ajustado que se clavaba en su piel. “No sé exactamente cuánto hago en Only Fans, pero me dedico a eso <i>full time</i>”, comentó.'
                     },
                     {
+                        type: 'text',
+                        value: 'Unos puestos a la derecha del de Hika había un stand de un hombre que dibujaba a Krilin, un personaje de Dragon Ball. Alrededor de siete personas ojeaban los libros de la cosplayer, mientras que en el puesto del dibujante solo había dos. Sobre la mesa del hombre, que rondaría los 40 años, había señaladores, pósters, cartas y pequeños dibujos. El artista se llamaba Mauro y, tímidamente, contó cómo le costaba llegar a fin de mes: “Tengo una nena de cuatro años, no puedo dejar mi laburo y dedicarme solo a esto”. “Trabajo a la mañana, a la tarde estoy con ella y a la noche dibujo”, explicó mientras pasaba el lápiz por un papel rugoso. Todo en su stand era artesanal; sin embargo, los que paseaban por el “cosplay alley” solo se detenían unos segundos a ver qué dibujaba Mauro y luego se instalaban en el puesto de Hika.'
+                    },
+                    {
                         type: 'image',
                         value: '4c.jpg',
                         caption: 'Caro (Evelynn) cuenta los desafíos del cosplay en el evento.' // EPÍGRAFE
-                    },
-                    {
-                        type: 'text',
-                        value: 'Unos puestos a la derecha del de Hika había un stand de un hombre que dibujaba a Krilin, un personaje de Dragon Ball. Alrededor de siete personas ojeaban los libros de la cosplayer, mientras que en el puesto del dibujante solo había dos. Sobre la mesa del hombre, que rondaría los 40 años, había señaladores, pósters, cartas y pequeños dibujos. El artista se llamaba Mauro y, tímidamente, contó cómo le costaba llegar a fin de mes: “Tengo una nena de cuatro años, no puedo dejar mi laburo y dedicarme solo a esto”. “Trabajo a la mañana, a la tarde estoy con ella y a la noche dibujo”, explicó mientras pasaba el lápiz por un papel rugoso. Todo en su stand era artesanal; sin embargo, los que paseaban por el “cosplay alley” solo se detenían unos segundos a ver qué dibujaba Mauro y luego se instalaban en el puesto de Hika.'
                     },
                     {
                         type: 'text',
@@ -220,11 +214,6 @@ const levels = [
                 title: "Stands Gamer",
                 content: [ 
                     {
-                        type: 'image',
-                        value: '5a.jpg',
-                        caption: 'El stand de Nintendo, uno de los más concurridos.' // EPÍGRAFE
-                    },
-                    {
                         type: 'text',
                         value: 'Pasando el “cosplay alley” estaba lo más importante para la comunidad <i>gamer</i>: los stands de videojuegos. Eran 23 los puestos dedicados a vender componentes para computadoras, promocionar juegos, equipos de audio, sillas gamer, y todo lo relacionado con la comunidad. Marcas como Compra Gamer, JBL, Logitech, KRÜ Store, AMD y Nintendo, proponían actividades a cambio de premios o tickets que se podían canjear por merch de las marcas. Las filas para participar de las actividades eran larguísimas, y el calor del lugar mezclado con una multitud que se multiplicaba, transformó al evento en una prueba de resistencia física.'
                     },
@@ -240,6 +229,11 @@ const levels = [
                     {
                         type: 'text',
                         value: `En el puesto de Nintendo, que ocupaba gran parte del espacio dispuesto por la AGS, había ocho Nintendo Switch 2 para que el público probara. Compra Gamer puso a disposición monitores curvos, y Shell computadores con volantes y cambios. Sin embargo, para Jawer, un chico de 23 años de pelo largo y enrulado que visita la AGS desde su edición número ocho, esto no es suficiente: “Antes habían más stands, juegos y premios. Para qué quiero probar computadoras si ya tengo una en mi casa”. Su crítica es válida: ¿Por qué la atracción principal de un evento de <i>gaming</i> destinado a <i>gamers</i> ofrece lo mismo de lo que ya disponen? Para Ariel, parte del grupo de amigos que acompañaba a Jawer, la respuesta es simple: “Es que nosotros ya no somos el público principal de la AGS. Están tratando de sumar más gente que le guste el trap”. Siguiendo con lo que planteaba Ariel, su amigo Matias agregó que, “a nosotros no nos gusta la música que pasan ni lo que venden en los stands. Ya no es original, se nota que se volvió comercial y se llenó de gente que no juega ni es parte de los <i>fandoms</i>”.`
+                    },
+                    {
+                        type: 'image',
+                        value: '5b.jpg',
+                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -518,6 +512,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
