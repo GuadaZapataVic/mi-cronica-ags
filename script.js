@@ -141,6 +141,11 @@ const levels = [
                         value: 'Al costado del escenario, M0chi, una chica de baja estatura que parecía un camaleón, posaba para los que le pedían una foto. “Estoy haciendo cosplay de Neeko, es un personaje del LOL”, dijo en medio de un tumulto de gente. Apenas terminó la oración, un chico con una cámara profesional se le puso enfrente y le gritó “¡foto!”. Ella se puso en cuclillas, apoyó una mano en el piso y le sonrió a la cámara. La cola larga que le brotaba de la espalda baja se asomaba por detrás de su cabeza, lo que le daba un toque exótico y surrealista, casi que no parecía humana. M0chi esperó al flash y luego se irguió y señaló su traje como si no hubiera pasado nada: “Esto es goma eva, cancán y cartón. Todo lo compras en una librería, el tema es el tiempo. Este traje me llevó alrededor de 12 horas en hacer” explicó. M0chi, que no quiso compartir su nombre real, estaba cubierta en cancán, lo que le dio la libertad de pintar sin manchar su cuerpo. Con esta técnica logró que los trazos verdes que la recorrían de pies a cabeza se integraran a ella.'
                     },
                     {
+                        type: 'image',
+                        value: '3b.jpg',
+                        caption: 'M0chi (Neeko) y Larissa (RN Aquila) posan para las cámaras.' // EPÍGRAFE
+                    },
+                    {
                         type: 'text',
                         value: 'La cosplayer-camaleón parecía descalza, pero en realidad, se había pegado una plantilla a modo de zapato. A su lado, una chica intentaba no pisarla con sus altos tacos negros. Se llamaba Larissa, y era muy alta y voluptuosa. Llevaba un vestido negro con un escote pronunciado y tenía piercings encima del labio y en las mejillas. Estaba haciendo cosplay de RN Aquila, de <i>Azur Lane</i>. A pesar de que no dejaba de sonreír, tenía un aire satánico, como si fuera una bruja: quizás era por los cuernos que le brotaban de los costados de su cabeza y que atravesaban una especie de velo de monja, o por sus piernas tatuadas con estrellas y calaveras. Pero eso no le impedía ser dulce con quienes se le acercaban a pedirle una foto.'
                     },
@@ -512,6 +517,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
