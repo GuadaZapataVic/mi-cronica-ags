@@ -2,9 +2,10 @@ body {
     margin: 0;
     overflow: hidden; 
     image-rendering: pixelated; 
+    font-family: 'Georgia', serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 /* NUEVO: Estilo para el botón de volver */
 .back-button {
@@ -17,7 +18,7 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Georgia', serif;
     font-weight: 700;
     font-size: 14px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -83,7 +84,7 @@ body {
     border-radius: 10px;
     z-index: 10;
     /* CAMBIO: Márgenes horizontales más anchos (50px) */
-    padding: 20px 50px; 
+    padding: 20px 10px; 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
@@ -114,6 +115,7 @@ body {
     /* Estilos de scroll para Firefox */
     scrollbar-width: thin;
     scrollbar-color: #999 #444;
+    line-height: 30px;
 }
 
 
@@ -126,7 +128,7 @@ body {
     text-align: center;
     font-weight: 700;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Georgia', serif;
 }
 
 #message-content-wrapper p {
@@ -135,9 +137,10 @@ body {
     font-weight: 400;
     white-space: pre-wrap; 
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Georgia', serif;
     /* CAMBIO: Texto justificado */
     text-align: justify;
+    padding: 0px 160px;
 }
 
 #message-content-wrapper img {
