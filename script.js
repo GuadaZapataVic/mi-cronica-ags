@@ -100,7 +100,7 @@ const levels = [
                     {
                         type: 'image',
                         value: '2b.jpg',
-                        caption: 'El público joven, principal audiencia de los artistas urbanos.' // EPÍGRAFE
+                        caption: 'En el escenario de Speed hubo artistas nacionales e internacionales' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -133,8 +133,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3b.jpg',
-                        caption: 'M0chi (Neeko) y Larissa (RN Aquila) posan para las cámaras.' // EPÍGRAFE
+                        value: '3a.jpg',
+                        caption: 'El sábado hubo un concurso de cosplays de Halloween' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -143,7 +143,7 @@ const levels = [
                     {
                         type: 'image',
                         value: '3b.jpg',
-                        caption: 'M0chi (Neeko) y Larissa (RN Aquila) posan para las cámaras.' // EPÍGRAFE
+                        caption: 'M0shi (Neeko) y Larissa (RN Aquila), respectivamente // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -151,8 +151,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '3a.jpg',
-                        caption: 'Los torneos de e-sports se transmitieron en pantallas gigantes.' // EPÍGRAFE
+                        value: '3c.jpg',
+                        caption: 'El viernes se enfrentaron los equipos KRÜ BLAZE y AKAVE en valorant' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -181,8 +181,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '4b.jpg',
-                        caption: 'El ilustrador Leo Batic en su puesto, dibujando por pasión.' // EPÍGRAFE
+                        value: '4a.jpg',
+                        caption: 'Cada cosplayer tenía un banner con su nombre artístico' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -194,8 +194,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '4c.jpg',
-                        caption: 'Caro (Evelynn) cuenta los desafíos del cosplay en el evento.' // EPÍGRAFE
+                        value: '4b.jpg',
+                        caption: 'Artistas de renombre como Leo Batic estuvieron presentes en la AGS' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -203,8 +203,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '4b.jpg',
-                        caption: 'El ilustrador Leo Batic en su puesto, dibujando por pasión.' // EPÍGRAFE
+                        value: '4c.jpg',
+                        caption: 'El sponsor del cosplay alley fue Fanta' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -229,8 +229,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '5b.jpg',
-                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
+                        value: '5a.jpg',
+                        caption: 'Compra Gamer sponsoreó competencias de Counter Strike en la zona gamer' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -243,7 +243,7 @@ const levels = [
                     {
                         type: 'image',
                         value: '5b.jpg',
-                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
+                        caption: 'La primera aparición en el país de la Nintendo Switch 2 fue en la AGS' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -255,8 +255,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '5b.jpg',
-                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
+                        value: '5c.jpg',
+                        caption: 'Samsung también fue un sponsor de la AGS' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -527,6 +527,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
