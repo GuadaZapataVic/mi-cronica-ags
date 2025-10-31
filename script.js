@@ -439,14 +439,17 @@ function checkCollisions() {
         const boxPixelY = (boxData.y * worldHeight) / 100;
         // -------------------------
         const boxRect = {
-            left: boxData.x,
-            right: boxData.x + BOX_SIZE,
-            bottom: boxData.y,
-            top: boxData.y + BOX_SIZE
-        };
+            left: boxPixelX, 
+            right: boxPixelX + BOX_SIZE,
+            bottom: boxPixelY,
+            top: boxPixelY + BOX_SIZE
+        };
 
         const isOverlappingX = marioRect.right > boxRect.left && marioRect.left < boxRect.right;
-        const isHittingFromBelow = marioRect.top > boxRect.bottom && marioRect.bottom < boxRect.bottom;
+        // --- ¡CORRECCIÓN 2! ---
+        // Corregimos la lógica de la colisión vertical
+        const isHittingFromBelow = marioRect.top > boxRect.bottom && marioRect.bottom < boxRect.top;
+        // ---------------------
         const isJumpingUp = velY > 0;
 
         if (isOverlappingX && isHittingFromBelow && isJumpingUp) {
@@ -465,72 +468,73 @@ function checkCollisions() {
     });
 }
 
-// 11. GAME LOOP (LÍMITES DE NIVEL MODIFICADOS)
+// 11. GAME LOOP (LÍMITES DE NIVEL CORREGIDOS)
 function gameLoop() {
-    // --- Lógica de movimiento ---
-    if (keys.ArrowLeft) {
-        posX -= moveSpeed;
-        direction = 'left';
-    }
-    if (keys.ArrowRight) {
-        posX += moveSpeed;
-        direction = 'right';
-    }
+    // --- Lógica de movimiento ---
+    if (keys.ArrowLeft) {
+        posX -= moveSpeed;
+        direction = 'left';
+    }
+    if (keys.ArrowRight) {
+        posX += moveSpeed;
+        direction = 'right';
+    }
 
-    const worldWidth = gameWorld.offsetWidth;
+    const worldWidth = gameWorld.offsetWidth;
 
-    // --- LÓGICA DE CAMBIO DE NIVEL (SIN LOOP) ---
-    
-    // 1. Ir al nivel ANTERIOR (Izquierda)
-    if (posX < -marioWidth) { 
-        if (currentLevelIndex > 0) { // Si NO es el primer nivel (0)
-            currentLevelIndex--; 
-            loadLevel(); 
-            posX = worldWidth - marioWidth - 10; // Aparece a la derecha
-        } else {
-            posX =  10 ; // Se traba en el borde izquierdo
-        }
-    } 
-    // 2. Ir al nivel SIGUIENTE (Derecha)
-    else if (posX > worldWidth - marioWidth) { 
-        if (currentLevelIndex < levels.length - 1) { // Si NO es el último nivel
-            currentLevelIndex++;
-            loadLevel(); 
-            posX = 10; // Aparece a la izquierda
-        } else {
-            posX = worldWidth - marioWidth; // Se traba en el borde derecho
-        }
-    }
+    // --- LÓGICA DE CAMBIO DE NIVEL (SIN LOOP) ---
+    
+    // 1. Ir al nivel ANTERIOR (Izquierda)
+    if (posX < 0) { // Si toca el borde izquierdo
+        if (currentLevelIndex > 0) { // Si NO es el primer nivel
+            currentLevelIndex--; 
+            loadLevel(); 
+            posX = worldWidth - marioWidth - 10; // Aparece a la derecha
+        } else {
+            // --- ¡CAMBIO! ---
+            posX = 0; // Se traba en el borde izquierdo (en 0)
+        }
+    } 
+    // 2. Ir al nivel SIGUIENTE (Derecha)
+    else if (posX > worldWidth - marioWidth) { 
+        if (currentLevelIndex < levels.length - 1) { // Si NO es el último nivel
+            currentLevelIndex++;
+            loadLevel(); 
+            posX = 10; // Aparece a la izquierda
+        } else {
+            posX = worldWidth - marioWidth; // Se traba en el borde derecho
+        }
+    }
 
-    // --- Lógica de Salto ---
-    if (keys.Space && !isJumping) {
-        velY = jumpStrength;
-        isJumping = true;
-        keys.Space = false;
-        
-        jumpSound.currentTime = 0;
-        jumpSound.play();
-    }
-    velY += gravity;
-    posY += velY;
+    // --- Lógica de Salto ---
+    if (keys.Space && !isJumping) {
+        velY = jumpStrength;
+        isJumping = true;
+        keys.Space = false;
+        
+        jumpSound.currentTime = 0;
+        jumpSound.play();
+    }
+    velY += gravity;
+    posY += velY;
 
-    // --- Colisión con el suelo ---
-    if (posY <= groundHeight) { 
-        posY = groundHeight;
-        velY = 0;
-        isJumping = false;
-    }
+    // --- Colisión con el suelo ---
+    if (posY <= groundHeight) { 
+        posY = groundHeight;
+        velY = 0;
+        isJumping = false;
+    }
 
-    // --- Resto de la lógica ---
-    checkCollisions();
+    // --- Resto de la lógica ---
+    checkCollisions(); // Ahora esto debería funcionar
 
-    mario.style.left = `${posX}px`;
-    mario.style.bottom = `${posY}px`;
+    mario.style.left = `${posX}px`;
+    mario.style.bottom = `${posY}px`;
 
-    let scaleX = (direction === 'left') ? -scale : scale;
-    mario.style.transform = `scaleX(${scaleX}) scaleY(${scale})`;
+    let scaleX = (direction === 'left') ? -scale : scale;
+    mario.style.transform = `scaleX(${scaleX}) scaleY(${scale})`;
 
-    updateAnimation();
+    updateAnimation();
 }
 
 
@@ -539,7 +543,6 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
-
 
 
 
