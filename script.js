@@ -143,7 +143,7 @@ const levels = [
                     {
                         type: 'image',
                         value: '3b.jpg',
-                        caption: 'M0shi (Neeko) y Larissa (RN Aquila), respectivamente // EPÍGRAFE
+                        caption: 'M0shi (Neeko) y Larissa (RN Aquila), respectivamente' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -204,7 +204,7 @@ const levels = [
                     {
                         type: 'image',
                         value: '4c.jpg',
-                        caption: 'El sponsor del cosplay alley fue Fanta' // EPÍGRAFE
+                        caption: 'El sponsor oficial del cosplay alley fue Fanta' // EPÍGRAFE
                     },
                     {
                         type: 'text',
