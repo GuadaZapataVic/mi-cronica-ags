@@ -330,7 +330,7 @@ function showMessage(boxData) {
     boxData.content.forEach(item => {
         if (item.type === 'text') {
             const textEl = document.createElement('p');
-            textEl.textContent = item.value;
+            textEl.innerHTML = item.value;
             messageContentWrapper.appendChild(textEl);
         } 
         else if (item.type === 'image') {
@@ -518,5 +518,6 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
