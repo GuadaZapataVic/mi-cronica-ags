@@ -42,8 +42,8 @@ const levels = [
         background: "fondo1.png", 
         boxes: [ 
             { 
-                x: 250, 
-                y: 250, 
+                x: 13, 
+                y: 25, 
                 title: "La pintada de la AGS",
                 content: [
                     { 
@@ -85,8 +85,8 @@ const levels = [
         background: "fondo2.png", 
         boxes: [
             { 
-                x: 150, 
-                y: 250,
+                x: 15, 
+                y: 25,
                 title: "Escenario de Speed Unlimited",
                 content: [
                     { 
@@ -119,8 +119,8 @@ const levels = [
         background: "fondo3.png", 
         boxes: [
             { 
-                x: 150, 
-                y: 250,
+                x: 15, 
+                y: 25,
                 title: "Escenario VISA",
                 content: [
                     {
@@ -171,8 +171,8 @@ const levels = [
         background: "fondo4.png", 
         boxes: [
             { 
-                x: 150, 
-                y: 250,
+                x: 15, 
+                y: 25,
                 title: "El cosplay alley",
                 content: [
                     {
@@ -219,8 +219,8 @@ const levels = [
         background: "fondo5.png", 
         boxes: [
             { 
-                x: 150, 
-                y: 250,
+                x: 15, 
+                y: 25,
                 title: "Stands Gamer",
                 content: [ 
                     {
@@ -389,8 +389,8 @@ function renderBoxes() {
     currentBoxes.forEach((boxData, index) => {
         const boxEl = document.createElement('div');
         boxEl.className = 'q-box';
-        boxEl.style.left = `${boxData.x}px`;
-        boxEl.style.bottom = `${boxData.y}px`;
+        boxEl.style.left = `${boxData.x}vw`;
+        boxEl.style.bottom = `${boxData.y}bh`;
         boxEl.style.width = `${BOX_SIZE}px`;
         boxEl.style.height = `${BOX_SIZE}px`;
         boxEl.dataset.index = index; 
@@ -426,6 +426,18 @@ function checkCollisions() {
     currentBoxes.forEach((boxData, index) => {
         if (boxData.hit) return; 
 
+
+        // --- ¡CAMBIO IMPORTANTE! ---
+        // Las posiciones de la caja (boxData.x, boxData.y) están en 'vw' y 'vh'.
+        // Necesitamos convertirlas a PÍXELES para compararlas con Mario.
+
+        const worldWidth = gameWorld.offsetWidth;
+        const worldHeight = gameWorld.offsetHeight;
+        
+        // Calculamos la posición en píxeles de la caja
+        const boxPixelX = (boxData.x * worldWidth) / 100;
+        const boxPixelY = (boxData.y * worldHeight) / 100;
+        // -------------------------
         const boxRect = {
             left: boxData.x,
             right: boxData.x + BOX_SIZE,
@@ -527,6 +539,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
