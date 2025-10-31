@@ -52,8 +52,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '1b.jpg',
-                        caption: 'El arte urbano fue protagonista en los pasillos de la AGS.' // EPÍGRAFE
+                        value: '1c.jpg',
+                        caption: 'Los graffitis comenzaron a realizarse a partir de las dos de la tarde' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -65,8 +65,8 @@ const levels = [
                     },
                     {
                         type: 'image',
-                        value: '1c.jpg',
-                        caption: 'Un artista da vida a un mural mientras un cosplayer de Goku observa.' // EPÍGRAFE
+                        value: '1b.jpg',
+                        caption: 'La temática de los graffitis estaba inspirada en gamers y streamers.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -527,6 +527,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
