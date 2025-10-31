@@ -202,6 +202,11 @@ const levels = [
                         value: 'En otras mesas había figuras en 3D de <i>Attack on Titan</i>, llaveros de <i>Hollow Knight</i>, pins de Pokémon y dibujos de <i>Demon Slayer</i>, <i>Jujutsu Kaisen</i>, y más. Cosplayers y personas con ropa urbana paseaban por el pasillo y charlaban. “Entre nosotros nos conocemos casi todos, hay pocas caras nuevas, sobre todo en eventos como la AGS” dijo Caro, una chica  jóven de Entre Ríos que hacía cosplay de Evelynn, una demonio del LOL que seduce a sus presas y luego las tortura hasta la muerte. La entrerriana llevaba una pollera negra ajustada con un corpiño acharolado del mismo color. Tenía una peluca lila que desafiaba las leyes de la gravedad, y permanecía en su cabeza recta y sintética a pesar de la transpiración y sus caminatas por el largo pasillo. “A mi me encanta venir por la gente: nos miran, nos charlan, nos piden fotos, es lo que más me gusta”, dijo mientras se masajeaba un pie adolorido tras más de seis horas en tacos aguja. “Eso sí, de la AGS no esperes más que el stand y la Speed. Nos hacen figurar en todos lados pero nadie nos paga por esto. Yo tuve que llegar como tres horas antes de que empiece y no nos ponen ni un aire acondicionado”, se quejó.'
                     },
                     {
+                        type: 'image',
+                        value: '4b.jpg',
+                        caption: 'El ilustrador Leo Batic en su puesto, dibujando por pasión.' // EPÍGRAFE
+                    },
+                    {
                         type: 'text',
                         value: 'Lo que decía Caro era cierto: en el pasillo hacía un calor insoportable, y eso es un problema para los cosplayers. “Con la transpiración, la peluca se me arruina; a algunos los trajes se les empiezan a despegar, y hasta hay gente que le baja la presión. Encima es un asco tener que estar sacándose fotos con pibes todos chivados”, contaba la entrerriana mientras se reía. A pesar de todo, los flashes de las cámaras no cesaban y, aún con la humedad aplastante, el “cosplay alley” era de las atracciones que más gente reunía. Desde curiosos hasta expertos, y para bien o para mal, todos estaban fascinados con la <i>performance</i> de los artistas del pasillo, y las fotos no dejaban de dispararse.'
                     }
@@ -247,6 +252,11 @@ const levels = [
                     {
                         type: 'text',
                         value: `El relato de las familias, sin embargo, era otro: “Nunca vinimos a nada parecido a esto, nos parece que está bueno para probar las compus”, decía una señora con una nena de vestido rosa que se le colgaba del brazo. Ambas hacían fila para tirar unos pinos con una pelotita de madera. Cuando llegaban al final de la fila, la nena jugaba su turno y el de su mamá, y volvía al principio emocionada por pasar otra vez.`
+                    },
+                    {
+                        type: 'image',
+                        value: '5b.jpg',
+                        caption: 'El stand temático de Minecraft, uno de los más elaborados.' // EPÍGRAFE
                     },
                     {
                         type: 'text',
@@ -517,6 +527,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
