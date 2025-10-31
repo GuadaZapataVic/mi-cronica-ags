@@ -46,14 +46,22 @@ const levels = [
                 y: 250, 
                 title: "La pintada de la AGS",
                 content: [
+                    { 
+                        type: 'text', 
+                        value: `El fin de semana largo de octubre, un largo pasillo de paredes grises recibió a fans de videojuegos, música y animé en Tecnópolis. Entre las paredes de ladrillo que indicaban la entrada y salida del Argentina Game Show (AGS), el concepto de “normal” se volvía relativo. Grupos de cosplayers, término derivado de costume play que se refiere a las personas que se caracterizan e interpretan a personajes de ficción, reían, cantaban y se sacaban fotos con admiradores que los llamaban por el nombre de sus personajes: “¡Furina, Salón Solitaire!” gritó una chica con un sombrero de Hello kitty a otra con un vestido azul y blanco extremadamente detallado, en el que se notaba que había invertido mucho tiempo en su confección.` 
+                    },
                     {
                         type: 'image',
                         value: '1b.jpg',
                         caption: 'El arte urbano fue protagonista en los pasillos de la AGS.' // EPÍGRAFE
                     },
-                    { 
-                        type: 'text', 
-                        value: `Bajo el rayo del sol, un largo pasillo de paredes grises recibía a fans de videojuegos, música o animé. Entre las paredes de ladrillo que indicaban la entrada y salida de la AGS, el concepto de “normal” era relativo. Grupos de cosplayers, término derivado de costume play que se refiere a las personas que se caracterizan e interpretan a personajes de ficción, reían, cantaban y se sacaban fotos con admiradores que los llamaban por el nombre de sus personajes: “¡Furina, Salón Solitaire!” gritó una chica con un sombrero de Cinnamoroll a otra con un vestido azul y blanco extremadamente detallado, en el que se notaba que había invertido mucho tiempo en su confección. Hacia la derecha, dos chicos con cortes de pelo idénticos y pantalones baggy los miraban con una mezcla de risa y sorpresa. Detrás de ellos, caminaba un hombre morocho, alto y musculoso de barba espesa con una mochila que emulaba ser un caparazón de tortuga con pinchos largos y plateados. El hombre, que debía medir más de un metro 85, le agarraba la mano a una chica muy voluptuosa que solo vestía una malla enteriza violeta con unas medias de red.` 
+                    {
+                        type: 'text',
+                        value: `Dos chicos con pantalones baggy y cortes de pelo muy prolijos miraban con una mezcla de risa y sorpresa a un hombre morocho, muy alto y musculoso. Tenía una barba oscura y espesa, y en su inmensa espalda llevaba una mochila verde loro que emulaba ser un caparazón de tortuga. De ella salían varios pinchos largos y plateados, que brillaban con el reflejo del sol. El hombre, que debía rondar los 30 años, le agarraba la mano a una chica muy voluptuosa que solo vestía una malla enteriza violeta con unas medias de red. Ella dejaba ver un tatuaje de serpiente que dejaba recorrer sus glúteos, y daba envidia imaginar lo frescos que estarían bajo el caluroso sol de octubre.`
+                    },
+                    {
+                        type: 'text',
+                        value: `Pronto, los ladrillos de las paredes se tiñeron de colores, y un joven sin remera al que le brillaba la transpiración por el sol sacó un pack de sprays de una mochila y se puso a pintar la pared. Otro hombre de gorra amarilla y bermudas camufladas le subió el volumen a un parlante que se iluminaba con los colores del arcoíris. Sonaba una canción en japonés. Serio, miró cómo otro chico de pelo largo y remera de Goku agitaba un spray que, como si fuera una varita mágica, coloreaba la pared a su paso. De a poco, en lo que supo ser una pared gris, ahora había una chica estilo animé muy voluptuosa que le tiraba un beso a quien se cruzara.`
                     },
                     {
                         type: 'image',
@@ -62,11 +70,11 @@ const levels = [
                     },
                     {
                         type: 'text',
-                        value: `Pronto, los ladrillos de las paredes se tiñeron de colores, y un joven sin remera al que le brillaba la transpiración por el sol sacó un pack de sprays de una mochila y se puso a pintar la pared. Otro hombre de gorra amarilla y bermudas camufladas le subió el volumen a un parlante que se iluminaba con los colores del arcoíris. Sonaba una canción en japonés. Serio, miró cómo otro chico de pelo largo y remera de Goku agitaba un spray que, como si fuera una varita mágica, coloreaba la pared a su paso. De a poco, en lo que supo ser una pared gris, ahora había una chica estilo animé muy voluptuosa que le tiraba un beso a quien se cruzara. Más adelante, un chico que vestía tres camperas flúo, una encima de la otra, pintó una llamarada de fuego. La transpiración le chorreaba por debajo de la gorra, sobre la frente. Daba calor verlo, y más aún cuando se agachaba, cambiaba de spray, se erguía y apretaba el gatillo, todo en cinco segundos. Repitió esa secuencia, cada vez más transpirado, y, de a poco, armó un rompecabezas visual que le dio vida a su graffiti.`
+                        value: `Más adelante, un chico que vestía tres camperas flúo, una encima de la otra, pintó una llamarada de fuego. El graffiti estaba bien logrado, pero a la llamarada le faltaban varios grados para alcanzar la temperatura de su autor, al que le chorreaban gotas gordas de transpiración por debajo de la gorra, sobre la frente. Daba calor verlo, y más aún cuando se agachaba, cambiaba de spray, se erguía y apretaba el gatillo, todo en cinco segundos, sin descansos. Repitió esa secuencia, cada vez más transpirado, y, de a poco, armó un rompecabezas visual que le dio vida a su graffiti.`
                     },
                     {
                         type: 'text',
-                        value: `Pasó el tiempo y más gente se juntó a pintar y a ver las obras de otros. De a poco, los mismos que se presentaron a la edición 2025 de la AGS se volvieron parte del evento, y crearon una nueva attraction: la “pintada” del Argentina Game Show.`
+                        value: `Pasó el tiempo y más gente se juntó a pintar y a ver las obras de otros. De a poco, el público se volvió parte del evento y creó una nueva atracción: la “pintada” del Argentina Game Show.`
                     }
                 ],
                 hit: false 
@@ -470,3 +478,4 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
