@@ -125,7 +125,7 @@ const levels = [
                 content: [
                     {
                         type: 'text',
-                        value: 'En el escenario de Visa hubo competencias de e-sports en vivo y otras actividades que involucraron al público. <i>Valorant</i>, <i>Counter Strike</i> y <i>League of Legends</i> (LOL) fueron algunos de los títulos que pasaron por la pantalla grande del escenario, y sirvieron de campo de batalla entre equipos compuestos por los presentes. También se celebraron las “Findes Gamers Cups” de LOL y <i>Valorant</i>: torneos <i>flash</i> con inscripciones abiertas al público. Los ganadores de las competencias fueron premiados con descuentos en juegos, tiendas gamer y componentes de computadora.'
+                        value: 'En el escenario de Visa, que tuvo lugar en la Nave de la ciencia, hubo competencias de e-sports en vivo y otras actividades que involucraron al público. <i>Valorant</i>, <i>Counter Strike</i> y <i>League of Legends</i> (LOL) fueron algunos de los títulos que pasaron por la pantalla grande del escenario, y sirvieron de campo de batalla entre equipos compuestos por los presentes. También se celebraron las “Findes Gamers Cups” de LOL y <i>Valorant</i>: torneos <i>flash</i> con inscripciones abiertas al público. Los ganadores de las competencias fueron premiados con descuentos en juegos, tiendas gamer y componentes de computadora.'
                     },
                     {
                         type: 'text',
@@ -512,6 +512,7 @@ updateGroundHeight(); // Calcula el suelo por primera vez
 posY = groundHeight;  // Asigna la posición inicial de Mario
 loadLevel(); 
 setInterval(gameLoop, 1000 / 60);
+
 
 
 
