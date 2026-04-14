@@ -48,7 +48,7 @@ const levels = [
                 content: [
                     { 
                         type: 'text', 
-                        value: `Más de 110.000 personas aprovecharon el fin de semana largo de octubre para ir al Argentina Game Show. El evento ocupó el escenario principal y toda la parte cubierta del predio de Tecnópolis, y aún así cosplayers y fans del trap se chocaban y amontonaban cuando iban de un show a otro.
+                        value: `Más de 110.000 personas aprovecharon el fin de semana largo de octubre para ir al Argentina Game Show. El evento ocupó el escenario principal y toda la parte cubierta del predio de Tecnópolis, y aún así cosplayers y fans del trap se chocaban y amontonaban cuando iban de un show a otro.`
 ` 
                     },
                     {
