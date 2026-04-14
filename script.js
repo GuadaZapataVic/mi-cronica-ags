@@ -48,16 +48,18 @@ const levels = [
                 content: [
                     { 
                         type: 'text', 
-                        value: `El fin de semana largo de octubre, un largo pasillo de paredes grises recibió a fans de videojuegos, música y animé en Tecnópolis. Entre las paredes de ladrillo que indicaban la entrada y salida del Argentina Game Show (AGS), el concepto de “normal” se volvía relativo. Grupos de cosplayers, término derivado de <i>costume play</i> que se refiere a las personas que se caracterizan e interpretan a personajes de ficción, reían, cantaban y se sacaban fotos con admiradores que los llamaban por el nombre de sus personajes: “¡Furina, Salón Solitaire!” gritó una chica con un sombrero de Hello kitty a otra con un vestido azul y blanco extremadamente detallado, en el que se notaba que había invertido mucho tiempo en confeccionarlo.` 
+                        value: `Más de 110.000 personas aprovecharon el fin de semana largo de octubre para ir al Argentina Game Show. El evento ocupó el escenario principal y toda la parte cubierta del predio de Tecnópolis, y aún así cosplayers y fans del trap se chocaban y amontonaban cuando iban de un show a otro.
+` 
                     },
                     {
                         type: 'image',
                         value: '1c.jpg',
-                        caption: 'Los graffitis comenzaron a realizarse a partir de las dos de la tarde' // EPÍGRAFE
+                        caption: 'Se empezaron a hacer graffitis a las dos de la tarde' // EPÍGRAFE
                     },
                     {
                         type: 'text',
-                        value: `Dos chicos con pantalones <i>baggy</i> y cortes de pelo muy prolijos miraban con una mezcla de risa y sorpresa a un hombre muy alto y musculoso que en su espalda llevaba una mochila verde loro que emulaba ser un caparazón de tortuga. De ella salían varios pinchos largos y plateados, que brillaban con el reflejo del sol. El hombre, que debía rondar los 30 años, le agarraba la mano a una chica muy voluptuosa que solo vestía una malla enteriza violeta muy cavada. Ella tenía tatuada una serpiente sobre sus glúteos, y daba envidia lo cómoda que parecía estar bajo el caluroso sol de octubre.`
+                        value: `Dos mundos aparentemente opuestos convivieron todo un fin de semana en un evento históricamente dedicado a los fans del anime, el manga y los juegos de PC. Con cada edición, la AGS se aleja un poco más de su público gamer y se acerca a los aficionados por la música mainstream, cosa que a los fieles históricos no les simpatiza. “A nosotros no nos gusta la música que pasan ni lo que venden en los stands”, comentaba Ariel, que hace cinco años que asiste al evento, “ya no es original, se nota que se volvió comercial y se llenó de gente que no juega ni es parte de los fandoms”, concluyó.`
+`
                     },
                     {
                         type: 'text',
