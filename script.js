@@ -49,7 +49,7 @@ const levels = [
                     { 
                         type: 'text', 
                         value: `Más de 110.000 personas aprovecharon el fin de semana largo de octubre para ir al Argentina Game Show. El evento ocupó el escenario principal y toda la parte cubierta del predio de Tecnópolis, y aún así cosplayers y fans del trap se chocaban y amontonaban cuando iban de un show a otro.`
-` 
+ 
                     },
                     {
                         type: 'image',
@@ -59,7 +59,7 @@ const levels = [
                     {
                         type: 'text',
                         value: `Dos mundos aparentemente opuestos convivieron todo un fin de semana en un evento históricamente dedicado a los fans del anime, el manga y los juegos de PC. Con cada edición, la AGS se aleja un poco más de su público gamer y se acerca a los aficionados por la música mainstream, cosa que a los fieles históricos no les simpatiza. “A nosotros no nos gusta la música que pasan ni lo que venden en los stands”, comentaba Ariel, que hace cinco años que asiste al evento, “ya no es original, se nota que se volvió comercial y se llenó de gente que no juega ni es parte de los fandoms”, concluyó.`
-`
+
                     },
                     {
                         type: 'text',
